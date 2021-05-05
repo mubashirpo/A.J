@@ -84,16 +84,18 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-╭─「 ${conn.user.name} 」
-│ Hai, %name!
-│
-│ Developer : ɱ𝐔𝐁🅰𝐬𝐇𝐢𝐑 
-╰───
+╔═─⊱ ❰ *_🄰🌹🄹 BOT_* ❱ ⊰
+╠➤ ⚠ INFO 🄰🌹🄹 BOT
+╠➤ 🆔 *NAME :* 🄰🌹🄹
+╠➤ 🎰 *OWNER :* ɱ𝐔𝐁🅰𝐬𝐇𝐢𝐑
+╠➤ ☎ *CONTACT OWNER :* Wa.me/966572004810
+╚═─⊱ ❰ *_🄰🌹🄹 BOT_* ❱ ⊰─❍
+  ----------------------------------
 %readmore`
-    let header = conn.menu.header || '╭─「 %category 」'
-    let body   = conn.menu.body   || '│ • %cmd%islimit'
-    let footer = conn.menu.footer || '╰────\n'
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+    let header = conn.menu.header || '╓─── *「 %category 」*'
+    let body   = conn.menu.body   || '║‣ *%cmd%islimit*'
+    let footer = conn.menu.footer || '╙───────々\n'
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by ɱ𝐔𝐁🅰𝐬𝐇𝐢𝐑`) + `\nɱ𝐔𝐁🅰𝐬𝐇𝐢𝐑\n\`\`\`\%npmdesc\`\`\``
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
